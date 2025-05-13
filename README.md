@@ -1,271 +1,232 @@
+Absolutely! Here's the improved `README.md` in plain text format for you to **copy and paste** directly into your GitHub README editor:
+
+---
+
+````markdown
+```ascii
 ███╗░░░███╗░█████╗░███╗░░██╗██╗████████╗░█████╗░██████╗░
 ████╗░████║██╔══██╗████╗░██║██║╚══██╔══╝██╔══██╗██╔══██╗
 ██╔████╔██║██║░░██║██╔██╗██║██║░░░██║░░░██║░░██║██████╔╝
 ██║╚██╔╝██║██║░░██║██║╚████║██║░░░██║░░░██║░░██║██╔══██╗
 ██║░╚═╝░██║╚█████╔╝██║░╚███║██║░░░██║░░░╚█████╔╝██║░░██║
 ╚═╝░░░░░╚═╝░╚════╝░╚═╝░░╚══╝╚═╝░░░╚═╝░░░░╚════╝░╚═╝░░╚═╝
+````
 
 # MANET Network Intrusion Detection System
 
-## Overview
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Python Version](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
 
-The **MANET Network Intrusion Detection System** is a command-line simulation designed to enhance security in Mobile Ad-Hoc Networks (MANETs). MANETs are decentralized, wireless networks where nodes communicate without fixed infrastructure, making them vulnerable to intrusions like file modifications or Black Hole attacks. This system implements an **Intrusion Detection System (IDS)** that monitors file changes in node directories, encrypts alerts using a **hybrid encryption technique** (3DES for messages, RSA for key exchange), and routes them securely to an admin node for analysis.
+> ⚠️ A Python-based simulated security system that monitors file activities across MANET nodes using hybrid encryption and dynamic routing.
 
-Developed as part of a master’s thesis, the system simulates a MANET with five nodes: four monitoring nodes (`Node_X1` to `Node_X3` and an additional node) and one admin node (`ADMIN`). It uses **Object-Oriented Analysis and Design (OOAD)** with **Unified Modeling Language (UML)** for structured development and **Python 3.11.5** for implementation. The project is ideal for secure communication in dynamic, resource-constrained environments like military operations, disaster response, or IoT networks.
+---
 
-Watch a [video demo](https://drive.google.com/file/d/1R7bFUaqWfdxPiKw1he6C9VygCgyk9S2A/view?usp=drive_link) showcasing the system in action, including node initialization, file monitoring, and alert propagation.
+## 📌 Overview
 
-## Features
+This **Network Intrusion Detection System** (NIDS) for **Mobile Ad-Hoc Networks (MANET)** simulates real-time file event monitoring across multiple nodes and routes encrypted alerts securely to an admin node. It is tailored for volatile environments such as **military ops**, **disaster zones**, and **IoT systems**.
 
-- **Real-Time Monitoring**: Tracks file changes (creation, modification, deletion) in node directories using the `watchdog` library.
-- **Hybrid Encryption**: Combines 3DES for efficient message encryption and RSA for secure key exchange, ensuring confidentiality.
-- **Secure Alert Routing**: Encrypts and forwards alerts through intermediate nodes to the admin node via UDP sockets.
-- **Color-Coded Logs**: Uses `colorama` for clear console output (green for created, yellow for modified, red for deleted).
-- **Dynamic Key Management**: The `KeyManager` class generates and distributes RSA key pairs for secure communication.
-- **MANET Simulation**: Simulates a five-node network with dynamic routing tables for alert propagation.
-- **Email Notifications**: Sends alerts to a configured email (via `monitor_mail.py`) for critical events.
-- **Dashboard Interface**: Includes a `real_dashboard.py` Textual-based GUI to visualize node activities in real time.
-- **UML Design**: Incorporates class, sequence, and activity diagrams for clear system architecture (see thesis documentation).
+🎓 Developed as part of a Master's Thesis using **Python 3.11.5**.
 
+📽️ [🎬 Watch Demo Video](https://drive.google.com/file/d/1R7bFUaqWfdxPiKw1he6C9VygCgyk9S2A/view?usp=drive_link)
 
+---
 
-## Project Structure
+## ✨ Features
 
-```plaintext
+* 📂 Real-Time File Monitoring (`watchdog`)
+* 🔐 Hybrid Encryption: 3DES + RSA
+* 📡 Secure Alert Routing via UDP
+* 🖥️ CLI + Textual Dashboard (`real_dashboard.py`)
+* 📬 Email Notifications (`monitor_mail.py`)
+* 🎨 Color-coded terminal logs (create/modify/delete)
+* 🔑 RSA Key Manager for key distribution
+* 🧭 Routing simulation (`AdHocSim.py`)
+* 🧱 UML Diagrams: Class, Sequence, Activity
+
+---
+
+## 📁 Project Structure
+
+```text
 manet-network-intrusion-detection-system-24/
-├── improved_code/                    # Directory for core IDS logic
-│   └── files_monitor.py             # Implements hybrid encryption and file monitoring
-├── NODE1/                           # Directory for Node_X1 monitored files
-├── NODE2/                           # Directory for Node_X2 monitored files
-├── NODE3/                           # Directory for Node_X3 monitored files
-├── NODE4/                           # Directory for additional node monitored files
-├── ADMIN/                           # Directory for admin node data
-├── screenshot/                      # Directory for system output screenshots
-├── Manet-master/                    # Directory for MANET simulator scripts
-│   └── AdHocSim.py                  # Simulates ad-hoc network routing
-├── art.txt                          # ASCII art logo for README
-├── config.json                      # Configuration for email and monitored files
-├── cred.txt                         # Email credentials (pickled, not shared)
-├── file_intrude.py                  # Simulates file changes for testing
-├── key_manager2.py                  # Manages RSA key pairs and node connections
-├── main.py                          # Legacy entry point (use nodes_test.py instead)
-├── manet_dashboard.py               # Simulated dashboard for node outputs
-├── monitor.py                       # Utility for basic message sending
-├── monitor_mail.py                  # Sends email notifications for alerts
-├── node_manager.py                  # Handles admin node message processing
-├── nodes.py                        # Defines node classes for report handling
-├── nodes_config                     # Stores node execution commands
-├── nodes_monitor.py                 # Monitors node directories for changes
-├── nodes_test.py                    # Main script to run and test nodes
-├── real_dashboard.py                # Real-time Textual-based GUI dashboard
-├── requirements.txt                 # Lists Python dependencies
-├── secure_files.py                  # Basic file monitoring logic (legacy)
-├── utilities.py                     # Utility functions for logging and config
-└── *.docx                           # Thesis documentation (not required for runtime)
+├── improved_code/
+│   └── files_monitor.py
+├── NODE1/ NODE2/ NODE3/ NODE4/
+├── ADMIN/
+├── screenshot/
+├── Manet-master/
+│   └── AdHocSim.py
+├── config.json
+├── cred.txt
+├── key_manager2.py
+├── nodes_test.py
+├── real_dashboard.py
+├── requirements.txt
+└── *.docx
 ```
 
+---
 
-## Prerequisites
+## ⚙️ Prerequisites
 
-- **Python 3.8+**: Install from [python.org](https://www.python.org/downloads/).
-- **Git**: Install from [git-scm.com](https://git-scm.com/downloads).
-- **Operating System**: Tested on Windows 10+; compatible with Linux/macOS with minor adjustments.
-- **Network**: Nodes use `127.0.0.2` (localhost) with ports 5555–5599; ensure ports are open.
-- **VS Code**: Recommended for editing monitored directories (optional).
-- **Dependencies** (listed in `requirements.txt`):
-  - `watchdog`: File system monitoring
-  - `pycryptodome`: RSA and 3DES encryption
-  - `colorama`: Colored console logs
-  - `textual`: Dashboard GUI
+* Python ≥ 3.8
+* Git
+* OS: Windows / Linux / macOS
+* UDP Ports: `5555–5599` open
 
 Install dependencies:
+
 ```bash
 pip install -r requirements.txt
+```
 
-Installation
+---
 
-Clone the Repository:
+## 🚀 Installation
+
+1. **Clone repository**
+
+```bash
 git clone https://github.com/AkinwandeSlim/manet-network-intrusion-detection-system-24.git
 cd manet-network-intrusion-detection-system-24
+```
 
+2. **Create node folders**
 
-Create Node Directories:
+```bash
 mkdir NODE1 NODE2 NODE3 NODE4 ADMIN
+```
 
+---
 
-Usage
-The system runs in five command-line terminals, simulating a MANET with four monitoring nodes and one admin node. Arrange terminals in a 2x2 grid for nodes (Node_X1 to Node_X3, one additional node) and a long terminal below for the key manager.
+## 🛠️ Usage
 
-Open Five Terminals:
+1. **Start Key Manager**
 
-Use Command Prompt, PowerShell, or VS Code integrated terminals.
-Arrange four terminals in a 2x2 grid and one below.
-
-
-Start the Key Manager (Terminal 5):
+```bash
 python key_manager2.py
+```
 
+2. **Run Monitoring Nodes**
 
-Runs on 127.0.0.1:5555, managing node connections and keys.
-
-
-Start Monitoring Nodes (Terminals 1–3):In separate terminals, run:
+```bash
 python nodes_test.py Node_X1 127.0.0.2 5559 NODE1
 python nodes_test.py Node_X2 127.0.0.2 5560 NODE2
 python nodes_test.py Node_X3 127.0.0.2 5561 NODE3
+python nodes_test.py ADD_NODE 127.0.0.2 5562 NODE4
+```
 
+3. **Run Admin Node**
 
-Start Admin Node (Terminal 4):
+```bash
 python nodes_test.py ADMIN 127.0.0.2 5599 ADMIN
+```
 
+4. **Simulate File Events**
 
-Test Intrusion Detection:
+```bash
+echo. > NODE1/test.txt       # Create
+echo Test >> NODE1/test.txt  # Modify
+rm NODE1/test.txt            # Delete
+```
 
-Use VS Code to modify files in NODE1, NODE2, NODE3, or NODE4:
-Create: echo. > NODE1\test.txt
-Modify: echo Test >> NODE1\test.txt
-Delete: del NODE1\test.txt
+5. **Launch Dashboard (Optional)**
 
-
-Observe console output:
-Nodes log changes and forward encrypted alerts (cyan for forwarding).
-Admin node decrypts and logs alerts (green for created, yellow for modified, red for deleted).
-Email notifications may be sent (if configured).
-
-
-
-
-Run the Dashboard (Optional):In a new terminal, run:
+```bash
 python real_dashboard.py
+```
 
+---
 
-Displays real-time node outputs in a Textual-based GUI.
+## 🖼️ Demo & Screenshots
 
+* 🎥 [Demo Video](https://drive.google.com/file/d/1R7bFUaqWfdxPiKw1he6C9VygCgyk9S2A/view?usp=drive_link)
+* 📸 Add your screenshots under `/screenshot` folder
 
-Stop the System:
+---
 
-Press Ctrl+C in each terminal to stop nodes and the key manager.
+## ⚙️ How It Works
 
+1. 🔑 RSA keys generated and distributed by Key Manager
+2. 🖥️ Nodes monitor folders with `watchdog`
+3. 🔒 Alerts encrypted (3DES + RSA)
+4. 📡 Alerts routed via UDP hops
+5. 📨 Admin receives, decrypts & logs alert
+6. 🖥️ Visuals and emails triggered
 
+---
 
-Demo and Screenshots
+## 📚 Research Methodology
 
-Video Demo: Watch the system in action here. It shows:
+* UML diagrams (Use-case, Class, Sequence, Activity)
+* Object-Oriented Design Principles
+* Evaluation metrics in thesis `.docx` files
 
-Key manager initialization
-Node connections to the MANET
-File change detection and alert encryption
-Alert routing and admin node decryption
+---
 
+## ✅ Testing
 
-Screenshots (in screenshot/):
+* Unit tests for encryption & logging
+* Integration: Node routing & alerts
+* Scenario-based: `file_intrude.py` file events
 
-Key Manager Initialization: 
-Node Connection: 
-Alert Triggering: 
-Admin Decryption: 
-Note: Add screenshots to the screenshot/ directory and update paths if needed.
+---
 
+## 🧩 Challenges Addressed
 
+* 🛰️ Dynamic topologies (routing)
+* 🔐 Lightweight security (3DES+RSA)
+* 📊 Real-time response with dashboard
+* 💡 Usability in CLI & Textual UI
 
-How It Works
+---
 
-Key Manager (key_manager2.py):
+## 🔮 Future Enhancements
 
-Initializes on 127.0.0.1:5555, generates RSA key pairs, and maintains a routing table.
-Distributes public keys to nodes for secure communication.
+* Dynamic node join/leave
+* ML-based anomaly detection
+* Advanced protocols (e.g., AODV)
+* Remote/cloud alert sync
+* Web-based GUI
 
+---
 
-Node Monitoring (files_monitor.py):
+## 🤝 Contributing
 
-Each node (Node_X1 to Node_X3, additional node) monitors its directory using watchdog.
-Detects file changes and triggers alerts (e.g., “File test.txt is modified”).
+```bash
+git checkout -b feature/your-feature
+git commit -m "Add <feature>"
+git push origin feature/your-feature
+```
 
+Then open a Pull Request.
 
-Hybrid Encryption:
+---
 
-3DES: Encrypts alert messages for speed.
-RSA: Encrypts the 3DES key using the admin’s public key.
-Alerts are JSON-encoded and sent via UDP.
+## 📄 License
 
+This project is under the [MIT License](LICENSE).
 
-Alert Routing:
+---
 
-Nodes forward encrypted alerts to the next node based on the routing table.
-The admin node (ADMIN) receives and decrypts alerts.
+## 📞 Contact
 
+**Author:** Akinwande Slim
+📧 [akinwandealex95@gmail.com](mailto:akinwandealex95@gmail.com)
+🌐 [GitHub](https://github.com/AkinwandeSlim)
 
-Logging and Notifications:
+---
 
-Color-coded logs enhance readability.
-Email alerts are sent via monitor_mail.py for critical events.
+## 🙏 Acknowledgments
 
+* Inspired by Sankarayanan et al. (2017)
+* Built with: Python, watchdog, pycryptodome, textual
+* UMLs via diagrams.net
+* Thanks to open-source community ❤️
 
+```
 
-Research Methodology
-Based on the master’s thesis, the system uses OOAD with UML:
+---
 
-Use Case Diagrams: Define monitoring and alerting interactions.
-Class Diagrams: Structure classes like FileMonitor and KeyManager.
-Sequence Diagrams: Show node-to-admin alert flow.
-Activity Diagrams: Detail encryption and routing processes.
-
-See thesis files (e.g., MANET_CHAP4 (1).docx) in the repository for details. UML diagrams are not included but can be visualized using tools like diagrams.net.
-Testing
-The system was tested rigorously:
-
-Unit Testing: Validated encryption (pycryptodome), file monitoring (watchdog), and routing.
-Integration Testing: Ensured node communication and alert propagation.
-System Testing: Simulated intrusions by modifying files in NODE1–NODE4 using VS Code.
-Scenario Testing: Created, modified, and deleted files to verify alert generation and delivery.
-
-Use file_intrude.py to automate file change simulations:
-python file_intrude.py
-
-Challenges Addressed
-
-Dynamic Topology: Routing tables adapt to node changes, ensuring reliable alert delivery.
-Resource Constraints: 3DES minimizes computational overhead; RSA secures key exchange.
-Security: Hybrid encryption prevents intermediate nodes from reading alerts.
-Usability: Color-coded logs and the real_dashboard.py GUI improve monitoring.
-
-Future Enhancements
-
-Scalability: Support dynamic node addition/removal.
-Advanced Routing: Implement protocols like AODV (inspired by Manet-master/AdHocSim.py).
-Cloud Logging: Store alerts in a secure database.
-ML Integration: Add anomaly detection for proactive intrusion prevention.
-Cross-Platform: Enhance Linux/macOS compatibility.
-
-Contributing
-Contributions are welcome! To contribute:
-
-Fork the repository.
-Create a feature branch:git checkout -b feature/your-feature
-
-
-Commit changes:git commit -m "Add your feature"
-
-
-Push to your fork:git push origin feature/your-feature
-
-
-Open a pull request.
-
-Follow the coding style in files_monitor.py and include tests.
-License
-Licensed under the MIT License. See LICENSE for details.
-Contact
-
-Author: Akinwande Slim
-GitHub: AkinwandeSlim
-Email: akinwandealex95@gmail.com
-
-Acknowledgments
-
-Research: Inspired by MANET security studies (e.g., Sankarayanan et al., 2017).
-Tools: Python, watchdog, pycryptodome, textual, and diagrams.net.
-Community: Thanks to open-source contributors and the Manet-master project.
-
-
-Secure your MANET with this robust IDS. Run the nodes, test intrusions, and explore the code!```
+Let me know if you want it exported as a `.md` file or pushed to a repo for you.
+```

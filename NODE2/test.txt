@@ -1,0 +1,2 @@
+pytho nodes_test.py "ADMIN" 127.0.0.2 5599 "ADMIN"
+python nodes_test.py "ADMIN" 127.0.0.2 5599 "ADMIN"

@@ -1,0 +1,7 @@
+
+ node_test.py "Node_X1" 127.0.0.2 5559 "NODE1"
+
+python nodes_test.py "Node_X2" 127.0.0.2 5560 "NODE2"
+python nodes_test.py "Node_X3" 127.0.0.2 5561 "NODE3"
+python nodes_test.py "ADMIN" 127.0.0.2 5599 "ADMIN"
+python nodes_test.py "Node_X3" 127.0.0.2 5561 "thesis - Copy (3)"

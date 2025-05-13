@@ -1,4 +1,3 @@
-Absolutely! Here's the improved `README.md` in plain text format for you to **copy and paste** directly into your GitHub README editor:
 
 ---
 
@@ -141,8 +140,6 @@ python real_dashboard.py
 ## 🖼️ Demo & Screenshots
 
 * 🎥 [Demo Video](https://drive.google.com/file/d/1R7bFUaqWfdxPiKw1he6C9VygCgyk9S2A/view?usp=drive_link)
-* 📸 Add your screenshots under `/screenshot` folder
-
 
 ## 📸 Screenshots
 

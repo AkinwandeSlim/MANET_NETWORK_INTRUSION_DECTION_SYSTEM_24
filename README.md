@@ -27,9 +27,43 @@ Watch a [video demo](https://drive.google.com/file/d/1R7bFUaqWfdxPiKw1he6C9VygCg
 - **Dashboard Interface**: Includes a `real_dashboard.py` Textual-based GUI to visualize node activities in real time.
 - **UML Design**: Incorporates class, sequence, and activity diagrams for clear system architecture (see thesis documentation).
 
+
+
 ## Project Structure
 
-manet-network-intrusion-detection-system-24/├── improved_code/│   └── files_monitor.py       # Core IDS logic with hybrid encryption├── NODE1/                    # Monitored node directory├── NODE2/                    # Monitored node directory├── NODE3/                    # Monitored node directory├── NODE4/                    # Monitored node directory├── ADMIN/                    # Admin node directory├── screenshot/               # Screenshots of system output├── Manet-master/             # MANET simulator scripts (e.g., AdHocSim.py)├── art.txt                   # ASCII art logo├── config.json               # Configuration (email, monitored files)├── cred.txt                  # Email credentials (non-text, not shared)├── file_intrude.py           # Simulates file changes for testing├── key_manager2.py           # Manages RSA key pairs and node connections├── main.py                   # Legacy entry point (use nodes_test.py instead)├── manet_dashboard.py        # Simulated dashboard for node outputs├── monitor.py                # Basic message sending utility├── monitor_mail.py           # Email notification logic├── node_manager.py           # Admin node message handling├── nodes.py                  # Node classes for report handling├── nodes_config              # Node execution commands├── nodes_monitor.py          # Node monitoring logic├── nodes_test.py             # Main script to run nodes├── real_dashboard.py         # Real-time dashboard for node outputs├── requirements.txt          # Python dependencies├── secure_files.py           # Basic file monitoring logic├── utilities.py              # Utility functions (logging, config)└── *.docx                    # Thesis documentation (not required for runtime)
+```plaintext
+manet-network-intrusion-detection-system-24/
+├── improved_code/                    # Directory for core IDS logic
+│   └── files_monitor.py             # Implements hybrid encryption and file monitoring
+├── NODE1/                           # Directory for Node_X1 monitored files
+├── NODE2/                           # Directory for Node_X2 monitored files
+├── NODE3/                           # Directory for Node_X3 monitored files
+├── NODE4/                           # Directory for additional node monitored files
+├── ADMIN/                           # Directory for admin node data
+├── screenshot/                      # Directory for system output screenshots
+├── Manet-master/                    # Directory for MANET simulator scripts
+│   └── AdHocSim.py                  # Simulates ad-hoc network routing
+├── art.txt                          # ASCII art logo for README
+├── config.json                      # Configuration for email and monitored files
+├── cred.txt                         # Email credentials (pickled, not shared)
+├── file_intrude.py                  # Simulates file changes for testing
+├── key_manager2.py                  # Manages RSA key pairs and node connections
+├── main.py                          # Legacy entry point (use nodes_test.py instead)
+├── manet_dashboard.py               # Simulated dashboard for node outputs
+├── monitor.py                       # Utility for basic message sending
+├── monitor_mail.py                  # Sends email notifications for alerts
+├── node_manager.py                  # Handles admin node message processing
+├── nodes.py                        # Defines node classes for report handling
+├── nodes_config                     # Stores node execution commands
+├── nodes_monitor.py                 # Monitors node directories for changes
+├── nodes_test.py                    # Main script to run and test nodes
+├── real_dashboard.py                # Real-time Textual-based GUI dashboard
+├── requirements.txt                 # Lists Python dependencies
+├── secure_files.py                  # Basic file monitoring logic (legacy)
+├── utilities.py                     # Utility functions for logging and config
+└── *.docx                           # Thesis documentation (not required for runtime)
+
+
 
 ## Prerequisites
 

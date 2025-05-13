@@ -143,6 +143,21 @@ python real_dashboard.py
 * 🎥 [Demo Video](https://drive.google.com/file/d/1R7bFUaqWfdxPiKw1he6C9VygCgyk9S2A/view?usp=drive_link)
 * 📸 Add your screenshots under `/screenshot` folder
 
+
+## 📸 Screenshots
+
+### 1. Initial Setup
+![Initial Setup](Screenshot%202025-05-12%20115229.jpg)
+
+### 2. Dashboard View
+![Dashboard](Screenshot%202025-05-12%20120008.jpg)
+
+### 3. Node Configuration
+![Node Config](Screenshot%202025-05-12%20120241.jpg)
+
+### 4. Alert Example
+![Alert Example](Screenshot%202025-05-12%20120411.jpg)
+
 ---
 
 ## ⚙️ How It Works

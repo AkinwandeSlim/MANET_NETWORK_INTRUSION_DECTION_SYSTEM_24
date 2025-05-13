@@ -62,7 +62,7 @@ manet-network-intrusion-detection-system-24/
 ├── secure_files.py                  # Basic file monitoring logic (legacy)
 ├── utilities.py                     # Utility functions for logging and config
 └── *.docx                           # Thesis documentation (not required for runtime)
-
+```
 
 
 ## Prerequisites
@@ -91,24 +91,6 @@ cd manet-network-intrusion-detection-system-24
 
 Create Node Directories:
 mkdir NODE1 NODE2 NODE3 NODE4 ADMIN
-
-
-Configure config.json:Update with your email and monitored files:
-{
-    "name": "Your Name",
-    "path": "thesis",
-    "email": "your.email@example.com",
-    "interval": 5,
-    "files_to_track": ["test.txt", "test_files.txt"]
-}
-
-
-Secure cred.txt:Store email credentials (used by monitor_mail.py) in cred.txt using pickle format:
-import pickle
-with open('cred.txt', 'wb') as f:
-    pickle.dump({'Email': 'your.email@example.com', 'Password': 'your-app-password'}, f)
-
-Note: Use an app-specific password for Gmail. Do not share cred.txt.
 
 
 Usage

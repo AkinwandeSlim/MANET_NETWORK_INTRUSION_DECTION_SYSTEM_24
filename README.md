@@ -1,20 +1,18 @@
 
 ---
 
-````markdown
-```ascii
+
 ███╗░░░███╗░█████╗░███╗░░██╗██╗████████╗░█████╗░██████╗░
 ████╗░████║██╔══██╗████╗░██║██║╚══██╔══╝██╔══██╗██╔══██╗
 ██╔████╔██║██║░░██║██╔██╗██║██║░░░██║░░░██║░░██║██████╔╝
 ██║╚██╔╝██║██║░░██║██║╚████║██║░░░██║░░░██║░░██║██╔══██╗
 ██║░╚═╝░██║╚█████╔╝██║░╚███║██║░░░██║░░░╚█████╔╝██║░░██║
 ╚═╝░░░░░╚═╝░╚════╝░╚═╝░░╚══╝╚═╝░░░╚═╝░░░░╚════╝░╚═╝░░╚═╝
-````
+
 
 # MANET Network Intrusion Detection System
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Python Version](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/downloads/)
 
 > ⚠️ A Python-based simulated security system that monitors file activities across MANET nodes using hybrid encryption and dynamic routing.
 
@@ -26,7 +24,7 @@ This **Network Intrusion Detection System** (NIDS) for **Mobile Ad-Hoc Networks 
 
 🎓 Developed as part of a Master's Thesis using **Python 3.11.5**.
 
-📽️ [🎬 Watch Demo Video](https://drive.google.com/file/d/1R7bFUaqWfdxPiKw1he6C9VygCgyk9S2A/view?usp=drive_link)
+📽️ [🎬 Watch Demo Video](https://www.youtube.com/watch?v=ZFatL-b8YzI)
 
 ---
 
